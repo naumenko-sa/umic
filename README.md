@@ -1,6 +1,3 @@
-# umic
-barcode counting for inDrops3 single cell RNA-seq protocol
-
 # summary_table
 
 - Reads the input stream (single ended fastq) and reports the most frequent DNA fragments.
