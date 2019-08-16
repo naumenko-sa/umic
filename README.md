@@ -18,8 +18,9 @@ gunzip -c real_huge.R3.fq.gz | head -n 40000000 | summary_table > real_huge.R3.t
 cat messages.txt
 head real_huge.R3.table.csv
 ```
-
-## 
-
-## compilation: `compile.sh summary_table.cpp`. Result is summary_table binary.
+- O2 usage:
+```
+sbatch summary_table.sh real_huge.R3.fq.gz
+```
+- compilation: `compile.sh summary_table.cpp`. Result is summary_table binary.
 
