@@ -26,9 +26,9 @@ int main(int argc, char* argv[])
 {
 	auto start = steady_clock::now();
 	string s_read;
-	map <string, int> frequency;
-	map <string, int> ::iterator it;
-	int i = 0;
+	map <string, long int> frequency;
+	map <string, long int> ::iterator it;
+	long int i = 0;
 	while(!cin.eof()){ 
 		getline(cin, s_read);
 
@@ -42,15 +42,14 @@ int main(int argc, char* argv[])
 		}
 		i++;
 	}
-	int total_reads = i-1;
+	long int total_reads = i-1;
 	
-
-	vector<pair<string, int>> pairs;
+	vector<pair<string, long int>> pairs;
 
 	for(auto itr = frequency.begin(); itr != frequency.end(); itr++)
 		pairs.push_back(*itr);
 
-	sort(pairs.begin(), pairs.end(), [=](const pair<string, int>& a, const pair<string, int>& b ){return a.second > b.second;});
+	sort(pairs.begin(), pairs.end(), [=](const pair<string, long int>& a, const pair<string, long int>& b ){return a.second > b.second;});
 
 
 	cout<<"read,count,frequency"<<endl;

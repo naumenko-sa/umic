@@ -62,6 +62,7 @@ int main(int argc, char* argv[])
 		m_barcodes.insert(s_buf);
 
 		ofstream of_buf(s_buf);
+		pair<string,ofstream> p(s_buf, of_buf);
 		m_fof_barcodes.push_back(of_buf);
 	}
 	f_barcodes.close();
